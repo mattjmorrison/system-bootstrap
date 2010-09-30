@@ -1,0 +1,42 @@
+#!/bin/bash
+
+if [[ "$0" == './setup' ]]
+then exit "setup must be sourced not executed"
+fi
+
+#install git
+apt-get install -y git-core
+
+#install virtualenv
+apt-get install -y python-virtualenv
+
+#install virtualenvwrapper
+pip install virtualenvwrapper
+
+#setup virtual environment wrapper
+#export WORKON_HOME=~/Envs
+#source /usr/local/bin/virtualenvwrapper.sh
+
+#save virtual environment wrapper setup in bashrc so it'll always be there for all terminals
+echo "export WORKON_HOME=~/Envs" >> ~/.bashrc
+echo "source /usr/local/bin/virtualenvwrapper.sh" >> ~/.bashrc
+source ~/.bashrc
+
+if [ ! -d $WORKON_HOME ]; then
+        mkdir -p $WORKON_HOME
+fi
+
+#create a default virtual environment
+mkvirtualenv default --no-site-packages
+
+#workon the default virtual environemnt
+workon default
+
+#
+#	App specific stuff here
+#
+git clone http://github.com/ask/chishop.git
+cd chishop
+python bootstrap.py
+bin/buildout
+
