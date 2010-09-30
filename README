@@ -2,3 +2,6 @@ This is a bootstrap script to setup a new virtual machine linux (debian/ubuntu) 
 and/or build server(s) for python projects.
 
 Use this in conjunction with Buildout to get a project up and running.
+
+To use this run the following command:
+wget http://github.com/mattjmorrison/python-linux-bootstrap/raw/master//bootstrap && source bootstrap
