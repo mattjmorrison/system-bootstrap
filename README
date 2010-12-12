@@ -4,4 +4,6 @@ and/or build server(s) for python projects.
 Use this in conjunction with Buildout to get a project up and running.
 
 To use this run the following command:
-wget http://github.com/mattjmorrison/python-linux-bootstrap/raw/master//bootstrap && source bootstrap
+wget --no-check-certificate http://github.com/mattjmorrison/python-linux-bootstrap/raw/master//bootstrap && source bootstrap
+
+Note: you may or may not need the --no-check-certificate depending on the version of wget you're using
