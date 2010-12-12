@@ -18,5 +18,5 @@ python bootstrap.py
 bin/buildout
 bin/manage.py syncdb
 
-bin/manage.py runserver 0.0.0.0:80
-bin/manage.py celeryd
+bin/manage.py runserver 0.0.0.0:80 &
+bin/manage.py celeryd &
