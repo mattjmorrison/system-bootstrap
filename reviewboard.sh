@@ -17,4 +17,5 @@ if [ ! -d $WORKON_HOME ]; then
         mkdir -p $WORKON_HOME
 fi
 mkvirtualenv default --no-site-packages
+workon default
 
