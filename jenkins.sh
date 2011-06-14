@@ -1,3 +1,5 @@
+# To run use:
+# wget --no-check-certificate https://raw.github.com/mattjmorrison/system-bootstrap/master/jenkins.sh && source jenkins.sh
 
 # Tested with Ubuntu 10.10 (Maverick Meerkat)
 
