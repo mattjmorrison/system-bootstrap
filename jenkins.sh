@@ -8,6 +8,8 @@ wget -q -O - http://pkg.jenkins-ci.org/debian/jenkins-ci.org.key | sudo apt-key 
 sudo echo "deb http://pkg.jenkins-ci.org/debian binary/" > /etc/apt/sources.list.d/jenkins.list
 sudo aptitude update
 
+# Install git
+sudo aptitude install git-core -y
 # Install Jenkins
 sudo aptitude install jenkins -y
 # Install Apache
