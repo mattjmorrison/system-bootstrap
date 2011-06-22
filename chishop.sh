@@ -14,9 +14,9 @@ cd chishop
 python bootstrap.py -d
 bin/buildout
 bin/django syncdb --noinput
-cd ..
-chmod 755 . -R
-chown www-data:www-data . -R
+bin/django createsuperuser --username admin --email admin@apps-system.com
+chmod 755 .. -R
+chown www-data:www-data .. -R
 
 # Setup apache
 a2dissite default
