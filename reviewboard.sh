@@ -7,7 +7,6 @@ apt-get install -y python-dev
 apt-get install -y memcached
 apt-get install -y patch
 
-
 # Create python virtualenv
 pip install virtualenvwrapper
 echo "export WORKON_HOME=~/Envs" >> ~/.bashrc
@@ -22,7 +21,6 @@ workon default
 #install python packages
 pip install python-memcached
 pip install ReviewBoard
-
 
 
 mysqladmin -p create reviewboard
