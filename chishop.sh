@@ -21,7 +21,7 @@ chown www-data:www-data .. -R
 # Setup apache
 a2dissite default
 echo '<VirtualHost *:80>' > /etc/apache2/sites-available/chishop
-echo '    ServerName chishop.company.com' >> /etc/apache2/sites-available/chishop
+echo '    ServerName chishop.apps-system.com' >> /etc/apache2/sites-available/chishop
 echo '    Alias /admin-media/' `pwd`'/eggs/Django-1.1.1-py2.6.egg/django/contrib/admin/media/' >> /etc/apache2/sites-available/chishop
 echo '    ServerAlias chishop' >> /etc/apache2/sites-available/chishop
 echo '    WSGIDaemonProcess chishop processes=1 threads=5 display-name=%{GROUP}' >> /etc/apache2/sites-available/chishop
