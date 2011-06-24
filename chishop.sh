@@ -18,11 +18,13 @@ bin/django createsuperuser --username admin --email admin@apps-system.com
 chmod 755 .. -R
 chown www-data:www-data .. -R
 
+DJV=`ls eggs | grep Django`
+ADMIN_MEDIA=`pwd`'/eggs/'$DJV'/django/contrib/admin/media/'
 # Setup apache
 a2dissite default
 echo '<VirtualHost *:80>' > /etc/apache2/sites-available/chishop
 echo '    ServerName chishop.apps-system.com' >> /etc/apache2/sites-available/chishop
-echo '    Alias /admin-media/' `pwd`'/eggs/Django-1.1.1-py2.6.egg/django/contrib/admin/media/' >> /etc/apache2/sites-available/chishop
+echo '    Alias /admin-media/' $ADMIN_MEDIA >> /etc/apache2/sites-available/chishop
 echo '    ServerAlias chishop' >> /etc/apache2/sites-available/chishop
 echo '    WSGIDaemonProcess chishop processes=1 threads=5 display-name=%{GROUP}' >> /etc/apache2/sites-available/chishop
 echo '    WSGIProcessGroup chishop' >> /etc/apache2/sites-available/chishop
